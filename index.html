@@ -97,6 +97,25 @@
       .ghost-border:hover {
         border-color: rgba(67, 70, 86, 0.4);
       }
+      html {
+        scroll-behavior: smooth;
+      }
+      .btn-hover {
+        transition: all 0.3s ease;
+      }
+      .btn-hover:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      .fade-in {
+        opacity: 0;
+        animation: fadeIn 1s ease-in forwards;
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
     </style>
 </head>
 <body class="selection:bg-primary/30">
@@ -114,13 +133,13 @@
 </div>
 <div class="flex items-center gap-4">
 <button class="material-symbols-outlined text-blue-200 scale-95 active:scale-100 transition-transform" style="">terminal</button>
-<button class="bg-primary text-on-primary px-6 py-2 rounded-xl font-semibold hover:bg-primary-container transition-all shadow-lg shadow-primary/10" style="">Resume</button>
+<a href="file:///C:/Users/Admin/Desktop/New%20folder/resume.html" target="_blank" class="bg-primary text-on-primary px-6 py-2 rounded-xl font-semibold hover:bg-primary-container transition-all shadow-lg shadow-primary/10 btn-hover">Resume</a>
 </div>
 </div>
 </nav>
 <main class="pt-20">
 <!-- Hero Section -->
-<section class="relative min-h-[921px] flex items-center px-8 lg:px-24 neural-glow overflow-hidden" id="hero">
+<section class="relative min-h-[921px] flex items-center px-8 lg:px-24 neural-glow overflow-hidden fade-in" id="hero">
 <div class="max-w-4xl z-10">
 <span class="text-tertiary font-label text-sm tracking-[0.2em] uppercase mb-4 block" style="">Future Intelligence Engineer</span>
 <h1 class="text-6xl md:text-8xl font-headline font-bold text-on-surface tracking-tighter leading-[0.9] mb-6" style="">KANGNA CHAUHAN</h1>
@@ -131,17 +150,18 @@
                     Passionate about building intelligent systems and uncovering insights through data. Bridging the gap between neural theory and scalable architecture.
                 </p>
 <div class="flex flex-wrap gap-4">
-<a class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:bg-primary-container transition-all scale-95 active:scale-100" href="#projects" style="">
+<a class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:bg-primary-container transition-all scale-95 active:scale-100 btn-hover" href="#projects" style="">
                         View Projects
                         <span class="material-symbols-outlined" style="">arrow_forward</span>
 </a>
+<a href="resume.pdf" target="_blank" class="bg-secondary text-on-secondary px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:bg-secondary-container transition-all scale-95 active:scale-100 btn-hover">Download Resume</a>
 </div>
 </div>
 <!-- Abstract background element -->
 <div class="absolute right-[-10%] top-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-container/10 rounded-full blur-[120px] hidden lg:block"></div>
 </section>
 <!-- About Me Section -->
-<section class="py-32 px-8 lg:px-24 bg-surface-container-low" id="about">
+<section class="py-32 px-8 lg:px-24 bg-surface-container-low fade-in" id="about">
 <div class="grid lg:grid-cols-2 gap-24 items-center max-w-7xl mx-auto">
 <div class="relative group">
 <div class="absolute -inset-4 bg-primary-container/20 rounded-xl blur-2xl group-hover:bg-primary-container/30 transition-all"></div>
@@ -167,7 +187,7 @@
 </div>
 </section>
 <!-- Skills Section: Bento Style -->
-<section class="py-32 px-8 lg:px-24" id="skills">
+<section class="py-32 px-8 lg:px-24 fade-in" id="skills">
 <div class="max-w-7xl mx-auto">
 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
 <div>
@@ -222,7 +242,7 @@
 </div>
 </section>
 <!-- Projects Section -->
-<section class="py-32 px-8 lg:px-24 bg-surface-container-lowest" id="projects">
+<section class="py-32 px-8 lg:px-24 bg-surface-container-lowest fade-in" id="projects">
 <div class="max-w-7xl mx-auto">
 <div class="mb-20 text-center">
 <h3 class="text-5xl font-headline font-bold text-blue-100" style="">Selected Research &amp; Dev</h3>
@@ -293,7 +313,7 @@
 </div>
 </section>
 <!-- Experience: Certifications -->
-<section class="py-32 px-8 lg:px-24" id="experience">
+<section class="py-32 px-8 lg:px-24 fade-in" id="experience">
 <div class="max-w-4xl mx-auto">
 <h3 class="text-4xl font-headline font-bold mb-16 text-blue-100" style="">Certifications &amp; Workshops</h3>
 <div class="space-y-4">
@@ -331,7 +351,7 @@
 </div>
 </section>
 <!-- Contact Section -->
-<section class="py-32 px-8 lg:px-24 bg-surface-container-low" id="contact">
+<section class="py-32 px-8 lg:px-24 bg-surface-container-low fade-in" id="contact">
 <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24">
 <div>
 <h3 class="text-5xl font-headline font-bold text-blue-100 mb-8 leading-tight" style="">Let's build the <span class="text-primary italic" style="">next</span> era of AI together.</h3>
